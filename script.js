@@ -1,10 +1,13 @@
-const text = document.querySelector(".text")
-document.querySelector(".color").addEventListener("input",(e)=>{
-    text.style.color =e.target.value
+const input = document.querySelector('#input');
+input.style.fontSize = document.querySelector("#size").value+"px";
+input.style.color = document.querySelector("#color").value;
+input.style.fontFamily = document.querySelector("#family").value;
+document.querySelector('#color').addEventListener("input",()=>{
+    input.style.color = document.querySelector("#color").value;
 })
-document.querySelector(".num").addEventListener("input",(e)=>{
-    text.style.fontSize =e.target.value+"px"
+document.querySelector('#size').addEventListener("input",()=>{
+    input.style.fontSize = document.querySelector("#size").value+"px";
 })
-document.querySelector(".font").addEventListener("change",(e)=>{
-    text.style.fontFamily =e.target.value
+document.querySelector('#family').addEventListener("input",()=>{
+    input.style.fontFamily = document.querySelector("#family").value;
 })
